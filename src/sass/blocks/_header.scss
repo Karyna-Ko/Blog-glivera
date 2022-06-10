@@ -1,0 +1,181 @@
+.warning {
+    min-height: 40px;
+    margin-bottom: 10px;
+    background-color: #22252E;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    display: flex;
+    justify-content: center;
+    padding: 10px 10px 13px 20px;
+    transition: all 1s;
+    &__menu {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: space-evenly;
+        align-items: center;
+        li {
+            margin-right: 16px;
+            margin-left: 16px;
+            font-size: 12px;
+            line-height: 16px;
+            font-weight: 400;
+            color: $grey-light;
+            a {
+                color: #FFFFFF;
+            }
+            &:first-child {
+                margin-left: 4px;
+                color: #FF8D00;
+                font-weight: 700;
+            }
+        }
+    }
+    &__btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        img {
+            display: block;
+            position: absolute;
+            top: 8px;
+            right: 8px;
+        }
+    }
+    &.close {
+        position: absolute;
+        top: -100%;
+        transform: translateY(-100%);
+    }
+}
+.navigation {
+    position: relative;
+    min-height: 40px;
+    padding: 40px 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__burger {
+        width: 24px;
+        height: 16px;
+        position: absolute;
+        top: 27px;
+        left: 12px;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: $black-color; 
+        display: none; 
+
+            &:before, &:after, span {
+                display: block;
+                width: 100%;
+                height: 2px;
+                background-color: $black-color;
+                position: absolute;
+                left: 0;
+            }
+            &:before, &:after {
+                content: '';
+                transition: transform .2s linear;
+            }
+            &:before {
+                top: 0;
+            }
+            &:after {
+                bottom: 0;
+
+            }
+            span {
+                top: 50%;
+                transform: translateY(-50%);
+                transition: opacity .2s linear;
+            }
+        &.active {
+            span {
+                opacity: 0;
+            }
+            &:before,  &:after {
+                top: 50%;
+            }
+            &:before {
+                transform: rotate(45deg);
+            }
+            &:after {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+	&__logo {
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        margin-left: 10%;
+        color: #000000;
+	}
+
+    .menu {
+        &__list {
+            display: flex;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            li {
+                position: relative;
+                margin: 0 25px;
+                &:hover {
+                    >.subnav {
+                        display: block;
+                    }
+                }
+                    .subnav {
+                        display: none;
+                        position: absolute;
+                        z-index: 2;
+                        &__link {
+                            
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+    
+        &__link {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 18px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: $grey-dark;    
+            position: relative;
+            &::after {
+                content: "";
+                display: block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 5px 5px 0 5px;
+                border-color: #323642 transparent transparent transparent;
+                position: absolute;
+                top: 50%;
+                left: 110%;
+                transform: translateY(-50%);
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            } 
+            &:focus {
+                border-bottom: 3px solid $main-color; 
+            }  
+        }
+    }
+
+    .btn {
+        display: flex;
+            &__login {
+                width: 90px;
+            }
+            &__get {
+                width: 160px;
+                margin: 0 60px 0 10px;
+            }
+    }
+}

@@ -1,0 +1,200 @@
+.pricing-dark {
+    background-color: #3D4251;
+    padding: 100px 0 53px;
+    .container {
+        padding: 0 30px;
+    }
+
+    &__title {
+        font-weight: 300;
+        font-size: 48px;
+        line-height: 64px;
+        text-align: center;
+        letter-spacing: -0.5px;
+        color: #FFFFFF;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 60px;
+    }
+
+    &__item {
+        width: 380px;
+        height: 340px;
+        padding: 48px 87px 40px 88px;
+        margin: 0 10px;
+        background: #FFFFFF;
+        border: 1px solid #EBECED;
+        border-radius: 6px;
+        filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.501961));
+        transition: height 0.8s;
+        overflow: hidden;
+        &:first-child {
+            margin-left: 0;
+        }
+        &:nth-child(2) {
+            height: 380px;
+            padding: 59px 87px 59px 88px;
+            outline: 4px solid $main-color;
+            outline-offset: -4px;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        &:hover {
+            outline: 4px solid $main-color;
+            outline-offset: -4px;
+            cursor: pointer; 
+            height: 380px;
+        }
+    }
+
+    &__period {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: center;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        color: $grey-dark;
+        &::after {
+            content:'';
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: $main-color;
+            margin: 12px auto 16px;
+        }
+    }
+    &__links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        color: $main-color;
+        margin-left: 20px;
+        &:first-child {
+            margin-left: 0;
+            img {
+                margin-left: 12px;
+            }
+        }
+        &:last-child {
+            margin-right: 0;
+            img {
+                margin-left: 13px;
+            }
+        }
+        &:hover {
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+    }
+}
+
+.price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &__sum {
+        font-weight: 300;
+        font-size: 56px;
+        line-height: 66px;
+        letter-spacing: -1.5px;
+        color: $black-color;
+    }
+
+    &__interval {
+        position: absolute;
+        bottom: 0;
+        right: -5px;
+    }
+
+    &__ins {
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: $grey-dark;
+         &:before {
+            content:'';
+            display: block;
+            width: 200px;
+            height: 1px;
+            background-color: #EBECED;
+            margin: 18px 0 27px;
+        } 
+    }
+
+    &__btn {
+        width: 205px;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+    }
+
+    &__saving {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        text-decoration-line: line-through;
+        color: #F24458;
+    }
+
+    &__total {
+        margin-left: 10px;
+    }
+
+    &__no {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 22px;
+        color: $grey-dark;
+    }
+}
+
+.pay {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 31px;
+    &__title {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 28px;
+        color: #FFFFFF;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        margin-right: 15px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        li {
+            margin-right: 15px;
+            margin-left: 15px;
+        }
+    }
+}
