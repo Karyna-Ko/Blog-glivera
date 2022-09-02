@@ -1,4 +1,4 @@
 # Blog-glivera
 test work
 
-![screenshot](img/test-work.png)
+![screenshot](dist/img/test-work.png)
